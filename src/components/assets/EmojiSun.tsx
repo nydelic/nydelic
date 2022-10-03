@@ -62,7 +62,7 @@ function Rhombus({ rotate, pulsate }: RhombusProps) {
   );
 }
 
-const SPIKE_PAIR_COUNT = 10;
+const SPIKE_PAIR_COUNT = 15;
 
 function EmojiSun({}: EmojiSunProps) {
   const [currentSpikees, setCurrentSpikees] = useState(2);
