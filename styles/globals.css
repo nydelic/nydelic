@@ -6,5 +6,12 @@
   :root {
     --accent-color: 0 145 255;
     --accent-color-light: 255 115 179;
+
+    --shade-900: 33 38 39;
   }
+  body {
+    @apply text-shade-900;
+  }
+}
+@layer components {
 }
