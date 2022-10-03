@@ -9,7 +9,7 @@ import { ReactNode, useEffect, useState } from "react";
 
 interface EmojiSunProps {}
 
-const EMOJI_SUN_SIZE = 80;
+const EMOJI_SUN_SIZE = 40;
 
 interface PulsateScaleXProps {
   pulsate: boolean;
@@ -19,8 +19,8 @@ function PulsateScaleX({ pulsate, children }: PulsateScaleXProps) {
   if (pulsate) {
     return (
       <motion.div
-        initial={{ scaleX: 0.2 }}
-        animate={{ scaleX: 0.9 }}
+        initial={{ scaleX: 0.4 }}
+        animate={{ scaleX: 0.8 }}
         transition={{
           repeatType: "mirror",
           repeat: Infinity,
@@ -32,7 +32,7 @@ function PulsateScaleX({ pulsate, children }: PulsateScaleXProps) {
       </motion.div>
     );
   }
-  return <motion.div initial={{ scaleX: 0.2 }}>{children}</motion.div>;
+  return <motion.div initial={{ scaleX: 0.4 }}>{children}</motion.div>;
 }
 
 interface RhombusProps {
@@ -62,7 +62,7 @@ function Rhombus({ rotate, pulsate }: RhombusProps) {
   );
 }
 
-const SPIKE_PAIR_COUNT = 15;
+const SPIKE_PAIR_COUNT = 10;
 
 function EmojiSun({}: EmojiSunProps) {
   const [currentSpikees, setCurrentSpikees] = useState(2);
