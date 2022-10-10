@@ -6,10 +6,11 @@ import {
   useTransform,
 } from "framer-motion";
 import { ReactNode, useEffect, useState } from "react";
+import EmojiFace from "./EmojiFace";
 
 interface EmojiSunProps {}
 
-const EMOJI_SUN_SIZE = 40;
+const EMOJI_SUN_SIZE = 30;
 
 interface PulsateScaleXProps {
   pulsate: boolean;
@@ -50,7 +51,7 @@ function Rhombus({ rotate, pulsate }: RhombusProps) {
     >
       <PulsateScaleX pulsate={pulsate}>
         <div
-          className="bg-shade-900"
+          className="bg-current"
           style={{
             transform: "rotate(45deg)",
             width: EMOJI_SUN_SIZE,
@@ -85,7 +86,7 @@ function EmojiSun({}: EmojiSunProps) {
   const shouldPulsate = currentSpikees === SPIKE_PAIR_COUNT;
 
   return (
-    <div className="flex p-4">
+    <div className="flex p-3 relative">
       <div
         style={{
           width: EMOJI_SUN_SIZE,
@@ -95,6 +96,9 @@ function EmojiSun({}: EmojiSunProps) {
       {Array.from(Array(currentSpikees + 1).keys()).map((key) => (
         <Rhombus key={key} rotate={stepSize * key} pulsate={shouldPulsate} />
       ))}
+      <div className="absolute top-0 left-0 right-0 bottom-0 text-shade-900 p-1">
+        <EmojiFace />
+      </div>
     </div>
   );
 }
