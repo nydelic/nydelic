@@ -48,9 +48,7 @@ const Home: NextPage = () => {
         </section>
         <Wave />
         <section className="max-w-2xl px-8 mx-auto">
-          <br />
-          <br />
-          <h1 className="text-4xl">
+          <h1 className="text-4xl mt-12">
             Ja, wir machen <br /> Webdesign
           </h1>
           <br />
@@ -61,32 +59,32 @@ const Home: NextPage = () => {
           <p className="px-4 text-xl mb-24">Hier bist du richtig!</p>
           <ParallaxEmoji />
           <SloganGraphic />
-
+        </section>
+        <div
+          aria-hidden
+          role="presentation"
+          className="overflow-hidden py-[50vmax] h-0 my-[-50vmax]"
+        >
+          <div
+            aria-hidden
+            role="presentation"
+            className="overflow-hidden w-[120vw] ml-[-10vw] rotate-[15deg] relative"
+          >
+            <div
+              aria-hidden
+              className="border-2 h-[40vw] mt-[-24vw] rounded-[100%] border-accent-color w-full"
+              role="presentation"
+            />
+          </div>
+        </div>
+        <div aria-hidden role="presentation" className="mb-[30vw]" />
+        <section className="max-w-2xl px-8 mx-auto">
+          <h1 className="text-4xl">Deine Wünsche?</h1>
           <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+          <p className="px-4 text-xl">
+            Markiere (durch darauf tippen) <br />
+            was du dir wünschst.
+          </p>
         </section>
       </main>
     </>

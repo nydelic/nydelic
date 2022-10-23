@@ -1,10 +1,21 @@
+import { motion } from "framer-motion";
+import { useRef } from "react";
+
 function SloganGraphic() {
   return (
     <>
       <h2 className="sr-only">Wir stehen auf anders</h2>
       <div className="max-w-xs mx-auto" aria-hidden>
         <div className="flex">
-          <div className="text-4xl font-display pr-4">Wir</div>
+          <motion.div
+            whileInView={"visible"}
+            variants={{ hidden: { scaleY: -1 }, visible: { scaleY: 1 } }}
+            initial="hidden"
+            viewport={{ margin: "-10% 0px" }}
+            className="text-4xl font-display pr-4 self-start"
+          >
+            Wir
+          </motion.div>
           <div
             className="border-t-2 border-r-2 h-24 mt-4 border-accent-color flex-grow flex-shrink"
             role="presentation"
@@ -27,7 +38,17 @@ function SloganGraphic() {
           </div>
           <div className="relative">
             <div className="text-4xl font-display absolute left-0 top-0 -translate-y-1/2 px-4">
-              stehen
+              <motion.div
+                whileInView={"visible"}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                initial="hidden"
+                viewport={{ margin: "-10% 0px" }}
+              >
+                stehen
+              </motion.div>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +63,17 @@ function SloganGraphic() {
               />
             </svg>
             <div className="text-4xl font-display absolute right-full bottom-0 translate-y-1/2 px-4">
-              auf
+              <motion.div
+                whileInView={"visible"}
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                initial="hidden"
+                viewport={{ margin: "-10% 0px" }}
+              >
+                auf
+              </motion.div>
             </div>
           </div>
         </div>
@@ -55,7 +86,17 @@ function SloganGraphic() {
             className="border-l-2 h-8 border-accent-color absolute right-20 top-12"
             role="presentation"
           />
-          <div className="text-4xl font-display text-right pt-20">Anders</div>
+          <div className="text-4xl font-display pt-20 flex">
+            <motion.div
+              className="ml-auto"
+              whileInView={"visible"}
+              variants={{ hidden: { scaleX: -1 }, visible: { scaleX: 1 } }}
+              initial="hidden"
+              viewport={{ margin: "-10% 0px" }}
+            >
+              Anders
+            </motion.div>
+          </div>
         </div>
       </div>
     </>
