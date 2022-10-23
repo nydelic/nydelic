@@ -15,7 +15,7 @@ function EndBlackBar() {
 }
 function EndWhiteBar() {
   return (
-    <div className="flex-grow flex-shrink bg-white px-8 -ml-4 border-white border-y-shade-900 border w-24"></div>
+    <div className="flex-grow flex-shrink bg-white px-8 -ml-4 border-shade-900 border-y w-24"></div>
   );
 }
 
