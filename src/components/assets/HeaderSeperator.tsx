@@ -4,7 +4,7 @@ interface HeaderSeperatorProps {}
 
 function HeaderSeperator({}: HeaderSeperatorProps) {
   return (
-    <div className="flex justify-around text-red text-white bg-shade-900 px-[10%] py-0">
+    <div className="flex justify-around text-red text-white bg-shade-900 px-[10%] py-0 mb-32">
       <EmojiSun />
       <EmojiSun />
       <EmojiSun />

@@ -45,7 +45,7 @@ function EmojiFace() {
       <motion.path
         d="M 26.824 21.75 C 26.824 25.828 23.464 29.133 19.319 29.133 C 15.175 29.133 11.815 25.828 11.815 21.75"
         fill="transparent"
-        strokeWidth="1.5"
+        strokeWidth="1"
         className="stroke-current"
         initial={{ translateY: -5, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1 }}

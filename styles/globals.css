@@ -10,8 +10,7 @@
     --shade-900: 33 38 39;
   }
   body {
-    @apply text-shade-900;
-    font-family: "Sora", sans-serif;
+    @apply text-shade-900 font-body;
   }
   h1,
   h2,
@@ -19,7 +18,7 @@
   h4,
   h5,
   h6 {
-    font-family: "Shrikhand", cursive;
+    @apply font-display;
   }
 }
 @layer components {
