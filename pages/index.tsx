@@ -168,7 +168,7 @@ const Home: NextPage = () => {
           height="123"
           viewBox="0 0 539 123"
           preserveAspectRatio="none"
-          className="w-full"
+          className="w-full -mb-[-1px]"
         >
           <path
             d="M 539 0 L -0 -0 L -0 13 C -0 13 370.351 37.963 539 123 Z"
