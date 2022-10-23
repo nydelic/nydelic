@@ -5,6 +5,7 @@ import { useRef } from "react";
 import ArrowDown from "../src/components/assets/ArrowDown";
 import EmojiCircle from "../src/components/assets/EmojiCircle";
 import HeaderSeperator from "../src/components/assets/HeaderSeperator";
+import OfferSelect from "../src/components/assets/OfferSelect";
 import SloganGraphic from "../src/components/assets/SloganGraphic";
 import Wave from "../src/components/assets/Wave";
 
@@ -78,15 +79,26 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div aria-hidden role="presentation" className="mb-[30vw]" />
-        <section className="max-w-2xl px-8 mx-auto">
-          <h1 className="text-4xl">Deine Wünsche?</h1>
-          <br />
-          <p className="px-4 text-xl">
-            Markiere (durch darauf tippen) <br />
-            was du dir wünschst.
-          </p>
+        <section>
+          <div className="max-w-2xl px-8 mx-auto">
+            <h1 className="text-4xl">Deine Wünsche?</h1>
+            <br />
+            <p className="px-4 text-xl mb-8">
+              Markiere (durch darauf tippen) <br />
+              was du dir wünschst.
+            </p>
+          </div>
+          <OfferSelect />
         </section>
       </main>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <Wave />
     </>
   );
 };
