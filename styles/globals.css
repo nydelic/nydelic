@@ -10,7 +10,7 @@
     --shade-900: 33 38 39;
   }
   body {
-    @apply text-shade-900 font-body;
+    @apply text-shade-900 font-body scroll-smooth;
   }
   h1,
   h2,

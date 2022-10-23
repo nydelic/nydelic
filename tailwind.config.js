@@ -1,10 +1,12 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./pages/**/*.{js,ts,jsx,tsx}", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        body: ['"Sora"', "sans-serif"],
+        body: ['"Sora"', ...defaultTheme.fontFamily.sans],
         display: ["Shrikhand", "cursive"],
       },
       colors: {

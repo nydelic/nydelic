@@ -21,7 +21,7 @@ function EndWhiteBar() {
 
 function OfferSelect() {
   return (
-    <div className="bg-shade-900 text-3xl">
+    <div className="bg-shade-900 text-3xl mb-12">
       <FlexRow>
         <GrowItem />
         <div className="whitespace-nowrap text-ellipsis overflow-hidden bg-white rounded-l-full px-8 -ml-4 border-shade-900 border">

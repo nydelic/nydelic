@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import WaveTile from "./WaveTile";
 
-interface WaveProps {}
+interface WaveProps {
+  light?: boolean;
+}
 
 const WAVE_TILE_WIDTH = 50;
 const WAVE_TILE_WIDTH_TW = "[--wave-tile-width:50px]";
 
-function Wave({}: WaveProps) {
+function Wave({ light = false }: WaveProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [tileCount, setTileCount] = useState(0);
   useEffect(() => {
@@ -37,7 +39,7 @@ function Wave({}: WaveProps) {
         style={{ marginLeft: -WAVE_TILE_WIDTH }}
       >
         {Array.from(Array(tileCount).keys()).map((key) => (
-          <WaveTile animate key={key} width={WAVE_TILE_WIDTH} />
+          <WaveTile light={light} key={key} width={WAVE_TILE_WIDTH} />
         ))}
       </div>
     </div>
