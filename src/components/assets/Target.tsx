@@ -4,7 +4,7 @@ interface TargetProps {}
 
 function Target({}: TargetProps) {
   return (
-    <div className="relative flex justify-center mb-12 min-w-min overflow-hidden pt-40 -mt-40">
+    <div className="relative flex justify-center mb-12 min-w-min overflow-hidden pt-40 -mt-40 mx-[-50px]">
       <div className="relative">
         {/* circles */}
         <svg
@@ -63,61 +63,73 @@ function Target({}: TargetProps) {
           ></path>
         </svg>
         {/* arrow */}
-        <motion.svg
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ width: 132, height: 121 }}
-          initial={{
-            translateX: 200,
-            translateY: -100,
-            opacity: 0,
-          }}
-          whileInView={{
-            translateX: 0,
-            translateY: 0,
-            opacity: 1,
-          }}
-          viewport={{ margin: "0px 0px -150px 0px", once: false }}
+        <motion.div
+          variants={{ inView: { opacity: 1 }, outOfView: { opacity: 1 } }}
+          whileInView="inView"
+          initial="outOfView"
+          viewport={{ margin: "0px 0px -50px  0px" }}
           transition={{
             duration: 0.1,
             ease: "linear",
           }}
-          className="absolute bottom-[36%] left-[41.5%]"
         >
-          <path
-            d="M 97.466 29.193 L 100.198 32.679 L 19.177 95.77 L 16.445 92.284 Z"
-            className="fill-shade-900"
-          ></path>
-          <path
-            d="M 2.896 0 L 5.891 3.6 L 2.872 20.328 L 0 16.185 Z"
-            transform="translate(103.174 26.07) rotate(88 2.945 10.164)"
-            className="fill-shade-900"
-          ></path>
-          <path
-            d="M 13.879 0 L 16.41 3.766 L 2.868 3.894 L 0 0.192 Z"
-            transform="translate(86.327 21.29) rotate(88 8.205 1.947)"
-            className="fill-shade-900"
-          ></path>
-          <path
-            d="M 13.879 0 L 16.41 3.766 L 2.868 3.894 L 0 0.192 Z"
-            transform="translate(81.327 25.29) rotate(88 8.205 1.947)"
-            className="fill-shade-900"
-          ></path>
-          <path
-            d="M 13.879 0 L 16.41 3.766 L 2.868 3.894 L 0 0.192 Z"
-            transform="translate(76.327 29.29) rotate(88 8.205 1.947)"
-            className="fill-shade-900"
-          ></path>
-          <path
-            d="M 2.896 0 L 5.891 3.6 L 2.872 20.328 L 0 16.185 Z"
-            transform="translate(98.174 30.07) rotate(88 2.945 10.164)"
-            className="fill-shade-900"
-          ></path>
-          <path
-            d="M 2.896 0 L 5.891 3.6 L 2.872 20.328 L 0 16.185 Z"
-            transform="translate(93.174 34.07) rotate(88 2.945 10.164)"
-            className="fill-shade-900"
-          ></path>
-        </motion.svg>
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ width: 132, height: 121 }}
+            variants={{
+              outOfView: {
+                translateX: 200,
+                translateY: -100,
+                opacity: 0,
+              },
+              inView: {
+                translateX: 0,
+                translateY: 0,
+                opacity: 1,
+              },
+            }}
+            transition={{
+              duration: 0.1,
+              ease: "linear",
+            }}
+            className="absolute bottom-[36%] left-[41.5%]"
+          >
+            <path
+              d="M 97.466 29.193 L 100.198 32.679 L 19.177 95.77 L 16.445 92.284 Z"
+              className="fill-shade-900"
+            ></path>
+            <path
+              d="M 2.896 0 L 5.891 3.6 L 2.872 20.328 L 0 16.185 Z"
+              transform="translate(103.174 26.07) rotate(88 2.945 10.164)"
+              className="fill-shade-900"
+            ></path>
+            <path
+              d="M 13.879 0 L 16.41 3.766 L 2.868 3.894 L 0 0.192 Z"
+              transform="translate(86.327 21.29) rotate(88 8.205 1.947)"
+              className="fill-shade-900"
+            ></path>
+            <path
+              d="M 13.879 0 L 16.41 3.766 L 2.868 3.894 L 0 0.192 Z"
+              transform="translate(81.327 25.29) rotate(88 8.205 1.947)"
+              className="fill-shade-900"
+            ></path>
+            <path
+              d="M 13.879 0 L 16.41 3.766 L 2.868 3.894 L 0 0.192 Z"
+              transform="translate(76.327 29.29) rotate(88 8.205 1.947)"
+              className="fill-shade-900"
+            ></path>
+            <path
+              d="M 2.896 0 L 5.891 3.6 L 2.872 20.328 L 0 16.185 Z"
+              transform="translate(98.174 30.07) rotate(88 2.945 10.164)"
+              className="fill-shade-900"
+            ></path>
+            <path
+              d="M 2.896 0 L 5.891 3.6 L 2.872 20.328 L 0 16.185 Z"
+              transform="translate(93.174 34.07) rotate(88 2.945 10.164)"
+              className="fill-shade-900"
+            ></path>
+          </motion.svg>
+        </motion.div>
       </div>
     </div>
   );
