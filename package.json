@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aria-hidden": "^1.2.2",
     "d3-ease": "^3.0.1",
     "framer-motion": "^7.5.1",
     "next": "12.2.0",

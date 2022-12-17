@@ -1,10 +1,15 @@
 import { motion, Variants } from "framer-motion";
-import { useRef } from "react";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import { hideOthers, Undo } from "aria-hidden";
 
 import Wave from "../assets/Wave";
+import ClientOnlyPortal from "../ClientOnlyPortal";
 
 function NavContent({ visible }: { visible: boolean }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const undoAriaHideRef = useRef<Undo>();
+
   const containerVariants: Variants = {
     visible: {
       backgroundColor: "#ffffff",
@@ -57,57 +62,71 @@ function NavContent({ visible }: { visible: boolean }) {
     },
   };
 
+  // aria-hide other elements when nav is open
+  useEffect(() => {
+    if (!containerRef.current) {
+      return;
+    }
+    if (visible) {
+      undoAriaHideRef.current = hideOthers(containerRef.current);
+    } else {
+      undoAriaHideRef.current?.();
+    }
+  }, [visible]);
+
   return (
-    <motion.div
-      ref={containerRef}
-      className="fixed top-0 left-0 right-0 bottom-0 flex flex-col z-40 invisible"
-      variants={containerVariants}
-      initial="hidden"
-      animate={visible ? "visible" : "hidden"}
-      onAnimationComplete={(a) => {
-        switch (a) {
-          case "hidden":
-            containerRef.current?.classList.add("invisible");
-            break;
-        }
-      }}
-      onAnimationStart={(a) => {
-        switch (a) {
-          case "visible":
-            containerRef.current?.classList.remove("invisible");
-            break;
-        }
-      }}
-    >
-      <motion.nav className="flex-grow flex-shrink-0 flex">
-        <ul className="text-5xl font-display m-auto w-full max-w-md py-8">
-          <motion.li variants={navItemVariants} className="mb-6">
-            Home
-          </motion.li>
-          <motion.li variants={navItemVariants} className="mb-6">
-            Angebot
-          </motion.li>
-          <motion.li variants={navItemVariants} className="mb-6">
-            Über uns
-          </motion.li>
-          <motion.li variants={navItemVariants} className="mb-6">
-            Leitbild
-          </motion.li>
-          <motion.li variants={navItemVariants} className="mb-6">
-            Kontakt
-          </motion.li>
-        </ul>
-      </motion.nav>
+    <ClientOnlyPortal containerId="portal-root">
       <motion.div
-        className="flex-grow flex-shrink bg-accent-color"
-        role="presentation"
-        variants={waveVariants}
+        ref={containerRef}
+        className="fixed top-0 left-0 right-0 bottom-0 flex flex-col z-40 invisible"
+        variants={containerVariants}
+        initial="hidden"
+        animate={visible ? "visible" : "hidden"}
+        onAnimationComplete={(a) => {
+          switch (a) {
+            case "hidden":
+              containerRef.current?.classList.add("invisible");
+              break;
+          }
+        }}
+        onAnimationStart={(a) => {
+          switch (a) {
+            case "visible":
+              containerRef.current?.classList.remove("invisible");
+              break;
+          }
+        }}
       >
-        <div className="mt-[-25px] after:absolute after:block after:left-0 after:right-0 after:top-full after:h-11 after:bg-accent-color">
-          <Wave />
-        </div>
+        <motion.nav className="flex-grow flex-shrink-0 flex">
+          <ul className="text-5xl font-display m-auto w-full max-w-md py-8">
+            <motion.li variants={navItemVariants} className="mb-6">
+              <Link href="/">Home</Link>
+            </motion.li>
+            <motion.li variants={navItemVariants} className="mb-6">
+              <Link href="/offer">Angebot</Link>
+            </motion.li>
+            <motion.li variants={navItemVariants} className="mb-6">
+              <Link href="/about">Über uns</Link>
+            </motion.li>
+            {/* <motion.li variants={navItemVariants} className="mb-6">
+          <Link href="/about">Leitbild</Link>
+        </motion.li> */}
+            <motion.li variants={navItemVariants} className="mb-6">
+              <Link href="/contact">Kontakt</Link>
+            </motion.li>
+          </ul>
+        </motion.nav>
+        <motion.div
+          className="flex-grow flex-shrink bg-accent-color"
+          role="presentation"
+          variants={waveVariants}
+        >
+          <div className="mt-[-25px] after:absolute after:block after:left-0 after:right-0 after:top-full after:h-11 after:bg-accent-color">
+            <Wave />
+          </div>
+        </motion.div>
       </motion.div>
-    </motion.div>
+    </ClientOnlyPortal>
   );
 }
 
