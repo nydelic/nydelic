@@ -4,7 +4,7 @@ interface TargetProps {}
 
 function Target({}: TargetProps) {
   return (
-    <div className="relative flex justify-center mb-12 min-w-min">
+    <div className="relative flex justify-center mb-12 min-w-min overflow-hidden pt-40 -mt-40">
       <div className="relative">
         {/* circles */}
         <svg
@@ -76,7 +76,7 @@ function Target({}: TargetProps) {
             translateY: 0,
             opacity: 1,
           }}
-          viewport={{ margin: "0px 0px -150px 0px", once: true }}
+          viewport={{ margin: "0px 0px -150px 0px", once: false }}
           transition={{
             duration: 0.1,
             ease: "linear",
