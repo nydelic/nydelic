@@ -4,7 +4,7 @@ interface TargetProps {}
 
 function Target({}: TargetProps) {
   return (
-    <div className="relative flex justify-center mb-12 min-w-min overflow-hidden pt-40 -mt-40 mx-[-50px]">
+    <div className="relative flex justify-center mb-12 min-w-min overflow-hidden pt-40 -mt-40">
       <div className="relative">
         {/* circles */}
         <svg

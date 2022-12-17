@@ -198,7 +198,9 @@ const Home: NextPage = () => {
             </div>
             <ArrowDown />
           </div>
-          <Target />
+          <div className="-mx-8">
+            <Target />
+          </div>
           <h2 className="text-4xl mb-12 text-center">Volltreffer landen!</h2>
           <div className="flex justify-center mb-24">
             <Link href={"/request-offer"}>
