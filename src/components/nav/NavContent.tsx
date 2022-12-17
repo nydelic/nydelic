@@ -187,7 +187,7 @@ function NavContent({ visible, onClose }: NavContentProps) {
           role="presentation"
           variants={waveVariants}
         >
-          <div className="mt-[-25px] after:absolute after:block after:left-0 after:right-0 after:top-full after:h-11 after:bg-accent-color">
+          <div className="mt-[-25px] after:absolute after:block after:left-0 after:right-0 after:top-full after:h-[50vh] after:-mt-1 after:bg-accent-color">
             <Wave />
           </div>
         </motion.div>
