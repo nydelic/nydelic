@@ -8,11 +8,10 @@ function Nav() {
       <div className="flex justify-between items-center">
         <div>x</div>
         <button
-          className="p-3 pt-5 z-50 flex flex-col"
-          role="button"
+          className={`p-3 pt-5 flex flex-col ${navOpen ? "hidden" : ""}`}
           onClick={(e) => {
             e.preventDefault();
-            setNavOpen((prev) => !prev);
+            setNavOpen(true);
           }}
         >
           <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
@@ -20,7 +19,12 @@ function Nav() {
           <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
         </button>
       </div>
-      <NavContent visible={navOpen} />
+      <NavContent
+        visible={navOpen}
+        onClose={() => {
+          setNavOpen(false);
+        }}
+      />
     </>
   );
 }
