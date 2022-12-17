@@ -27,7 +27,8 @@ function NavContent({ visible }: { visible: boolean }) {
       translateY: 0,
 
       transition: {
-        ease: "easeInOut",
+        type: "spring",
+        stiffness: 150,
       },
     },
     hidden: {
@@ -102,7 +103,7 @@ function NavContent({ visible }: { visible: boolean }) {
         role="presentation"
         variants={waveVariants}
       >
-        <div className="mt-[-25px]">
+        <div className="mt-[-25px] after:absolute after:block after:left-0 after:right-0 after:top-full after:h-11 after:bg-accent-color">
           <Wave />
         </div>
       </motion.div>
