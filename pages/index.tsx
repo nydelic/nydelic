@@ -10,6 +10,7 @@ import OfferSelect from "../src/components/assets/OfferSelect";
 import SloganGraphic from "../src/components/assets/SloganGraphic";
 import Target from "../src/components/assets/Target";
 import Wave from "../src/components/assets/Wave";
+import { Nav } from "../src/components/nav";
 
 function ParallaxEmoji({
   light = false,
@@ -64,8 +65,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <br />
-        <br />
+        <Nav />
         <HeaderSeperator />
         <section className="px-8">
           <h1 className="text-4xl max-w-max mx-auto mb-12">

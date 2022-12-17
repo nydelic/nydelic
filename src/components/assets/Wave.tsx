@@ -17,7 +17,10 @@ function Wave({ light = false }: WaveProps) {
       // const containerY = containerRef.current?.clientHeight;
 
       if (!containerX /*|| !containerY */) {
-        throw new Error("You broke the universe");
+        console.error(
+          "Wave could not calculate size, probably because the container is not rendered in the dom (i.e. display none)"
+        );
+        return;
       }
 
       const tilesNeeded = Math.ceil(containerX / WAVE_TILE_WIDTH) + 1; // + 1 for animation
