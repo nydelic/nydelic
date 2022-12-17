@@ -164,7 +164,7 @@ function NavContent({ visible, onClose }: NavContentProps) {
         </motion.button>
 
         <motion.nav className="flex-grow flex-shrink-0 flex">
-          <ul className="text-5xl font-display m-auto w-full max-w-md py-8">
+          <ul className="text-5xl font-display m-auto w-full max-w-md py-8 px-6">
             <motion.li variants={navItemVariants} className="mb-6">
               <Link href="/">Home</Link>
             </motion.li>
