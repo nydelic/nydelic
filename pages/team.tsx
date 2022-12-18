@@ -42,18 +42,17 @@ function Team({}: TeamProps) {
             <h1 className="text-4xl mt-12">Janik (links)</h1>
             <br />
             <p className="px-4 text-xl">
-              gestaltung. lorem ipsum blabla
-              <br />
-              blablablalba.
+              Setzt liebend gerne seine kreativen Fähigkeiten ein, um funktional
+              und ästhetisch ansprechende Produkte und Erlebnisse zu erschaffen.
             </p>
           </section>
           <section className="max-w-2xl px-8 mx-auto">
             <h1 className="text-4xl mt-12">Josias (rechts)</h1>
             <br />
             <p className="px-4 text-xl">
-              computer zauberer. lorem ipsum blabla
-              <br />
-              blablablalba.
+              Haucht den gestalteten Produkte von Janik leben ein und liebt die
+              ständig wandelnde Natur seines Jobs und somit die Möglichkeit, das
+              neuste und beste für die Produkte einzusetzen.
             </p>
           </section>
           <div className="h-[5vmax]" />
