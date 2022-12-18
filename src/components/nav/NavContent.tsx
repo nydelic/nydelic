@@ -126,7 +126,7 @@ function NavContent({ visible, onClose }: NavContentProps) {
                 translateX: 4,
               },
               "btn-hidden": {
-                rotate: "0",
+                rotate: "0deg",
                 translateY: 0,
                 translateX: 0,
               },
@@ -154,7 +154,7 @@ function NavContent({ visible, onClose }: NavContentProps) {
                 translateX: 4,
               },
               "btn-hidden": {
-                rotate: "0",
+                rotate: "0deg",
                 translateY: 0,
                 translateX: 0,
               },

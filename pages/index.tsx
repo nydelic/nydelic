@@ -64,8 +64,10 @@ const Home: NextPage = () => {
         <title>Nydelic</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <header>
         <Nav />
+      </header>
+      <main>
         <HeaderSeperator />
         <section className="px-8">
           <h1 className="text-4xl max-w-max mx-auto mb-12">
@@ -215,7 +217,7 @@ const Home: NextPage = () => {
       <footer className="flex max-w-2xl mx-auto justify-around text-sm py-12 pb-6">
         <div>impressum</div>
         <div>nydelic klg</div>
-        <div>copyright 2022</div>
+        <div>copyright 2023</div>
       </footer>
     </>
   );

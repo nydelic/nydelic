@@ -8,7 +8,10 @@ import {
 import { ReactNode, useEffect, useState } from "react";
 import EmojiFace from "./EmojiFace";
 
-interface EmojiSunProps {}
+interface EmojiSunProps {
+  size?: number;
+  faceColor?: string;
+}
 
 const EMOJI_SUN_SIZE = 30;
 
@@ -39,13 +42,14 @@ function PulsateScaleX({ pulsate, children }: PulsateScaleXProps) {
 interface RhombusProps {
   rotate: number;
   pulsate: boolean;
+  size: number;
 }
 
-function Rhombus({ rotate, pulsate }: RhombusProps) {
+function Rhombus({ rotate, pulsate, size }: RhombusProps) {
   return (
     <div
       style={{
-        marginLeft: -EMOJI_SUN_SIZE,
+        marginLeft: -size,
         rotate: `${rotate}deg`,
       }}
     >
@@ -54,8 +58,8 @@ function Rhombus({ rotate, pulsate }: RhombusProps) {
           className="bg-current"
           style={{
             transform: "rotate(45deg)",
-            width: EMOJI_SUN_SIZE,
-            height: EMOJI_SUN_SIZE,
+            width: size,
+            height: size,
           }}
         />
       </PulsateScaleX>
@@ -65,7 +69,10 @@ function Rhombus({ rotate, pulsate }: RhombusProps) {
 
 const SPIKE_PAIR_COUNT = 10;
 
-function EmojiSun({}: EmojiSunProps) {
+function EmojiSun({
+  size = EMOJI_SUN_SIZE,
+  faceColor = "text-shade-900",
+}: EmojiSunProps) {
   const [currentSpikees, setCurrentSpikees] = useState(2);
   const stepSize = 360 / (currentSpikees * 2);
 
@@ -89,14 +96,21 @@ function EmojiSun({}: EmojiSunProps) {
     <div className="flex p-3 relative">
       <div
         style={{
-          width: EMOJI_SUN_SIZE,
-          height: EMOJI_SUN_SIZE,
+          width: size,
+          height: size,
         }}
       />
       {Array.from(Array(currentSpikees + 1).keys()).map((key) => (
-        <Rhombus key={key} rotate={stepSize * key} pulsate={shouldPulsate} />
+        <Rhombus
+          size={size}
+          key={key}
+          rotate={stepSize * key}
+          pulsate={shouldPulsate}
+        />
       ))}
-      <div className="absolute top-0 left-0 right-0 bottom-0 text-shade-900 p-1">
+      <div
+        className={`absolute top-0 left-0 right-0 bottom-0 ${faceColor} p-1`}
+      >
         <EmojiFace />
       </div>
     </div>
