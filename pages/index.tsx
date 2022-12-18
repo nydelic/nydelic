@@ -128,13 +128,13 @@ const Home: NextPage = () => {
           <OfferSelect />
           <div className="flex justify-center">
             <div className="text-center">
-              <Link href={"/request-offer"}>
+              <Link href={"/contact"}>
                 <a className="block px-6 py-6 mb-8 rounded-full border border-accent-color text-accent-color text-2xl hover:text-white hover:bg-accent-color transition-colors">
-                  <del>Offerte anfragen</del>
+                  Offerte anfragen
                 </a>
               </Link>
               <small className="text-xs relative block text-accent-color-light -translate-y-8">
-                *momentan noch nicht verfügbar
+                *momentan nur Anfragen per E-Mail möglich
               </small>
               <Link href={"#contact"}>
                 <a className="block underline text-accent-color text-2xl">
