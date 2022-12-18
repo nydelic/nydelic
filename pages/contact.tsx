@@ -1,3 +1,4 @@
+import Link from "next/link";
 import EmojiSun from "../src/components/assets/EmojiSun";
 import { Nav } from "../src/components/nav";
 
@@ -25,6 +26,11 @@ function Contact({}: ContactProps) {
           <br />
           Kirchberg 4<br />
           8512 Thundorf
+          <br />
+          <br />
+          <Link href="/team">
+            <a className="block underline text-accent-color text-2xl">Team</a>
+          </Link>
         </div>
         <div
           role="presentation"

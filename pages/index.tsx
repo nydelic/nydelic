@@ -189,7 +189,7 @@ const Home: NextPage = () => {
             zum Web!
           </h2>
           <div className="flex justify-center mb-12">
-            <Link href={"/team"}>
+            <Link href="/team">
               <a className="block underline text-accent-color text-2xl">Team</a>
             </Link>
           </div>
@@ -205,7 +205,7 @@ const Home: NextPage = () => {
           </div>
           <h2 className="text-4xl mb-12 text-center">Volltreffer landen!</h2>
           <div className="flex justify-center mb-24">
-            <Link href={"/request-offer"}>
+            <Link href="/contact">
               <a className="block text-center min-w-[15rem] px-6 py-6 mb-8 rounded-full border border-accent-color text-accent-color text-2xl hover:text-white hover:bg-accent-color transition-colors">
                 Kontakt
               </a>

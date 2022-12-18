@@ -79,6 +79,12 @@ function NavContent({ visible, onClose }: NavContentProps) {
       undoAriaHideRef.current?.();
       document.body.style.overflow = "";
     }
+
+    // also undo on unmount (i.e. page redirect)
+    return () => {
+      undoAriaHideRef.current?.();
+      document.body.style.overflow = "";
+    };
   }, [visible]);
 
   return (
@@ -172,7 +178,7 @@ function NavContent({ visible, onClose }: NavContentProps) {
               <Link href="/offer">Angebot</Link>
             </motion.li>
             <motion.li variants={navItemVariants} className="mb-6">
-              <Link href="/about">Über uns</Link>
+              <Link href="/team">Team</Link>
             </motion.li>
             {/* <motion.li variants={navItemVariants} className="mb-6">
           <Link href="/about">Leitbild</Link>
