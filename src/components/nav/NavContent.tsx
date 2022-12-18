@@ -2,6 +2,7 @@ import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { hideOthers, Undo } from "aria-hidden";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 import Wave from "../assets/Wave";
 import ClientOnlyPortal from "../ClientOnlyPortal";
@@ -123,6 +124,7 @@ function NavContent({ visible, onClose }: NavContentProps) {
             "btn-hidden": { transition: {} },
           }}
         >
+          <VisuallyHidden.Root>Navigation schliessen</VisuallyHidden.Root>
           <motion.span
             style={{ transformOrigin: "center left" }}
             variants={{

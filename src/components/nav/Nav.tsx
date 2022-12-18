@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import NavContent from "./NavContent";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -51,6 +52,7 @@ function Nav() {
             setNavOpen(true);
           }}
         >
+          <VisuallyHidden.Root>Navigation öffnen</VisuallyHidden.Root>
           <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
           <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
           <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
@@ -87,6 +89,7 @@ function Nav() {
           setNavOpen(true);
         }}
       >
+        <VisuallyHidden.Root>Navigation öffnen</VisuallyHidden.Root>
         <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
         <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
         <span className="relative inline-block w-8 h-[3px] bg-shade-900 rounded-full mb-1 last:mb-0" />
