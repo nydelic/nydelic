@@ -74,6 +74,9 @@ function Nav() {
           },
         }}
         initial="hidden"
+        tabIndex={1}
+        aria-hidden={!floatingBurgerShowing && navOpen}
+        data-aria-hidden={!floatingBurgerShowing && navOpen}
         animate={floatingBurgerShowing && !navOpen ? "showing" : "hidden"}
         className="z-50 fixed -top-2 -right-2 p-5 h-20 w-20 rounded-full flex flex-col justify-center items-center bg-accent-color-light"
         onClick={(e) => {
