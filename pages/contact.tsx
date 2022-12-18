@@ -18,7 +18,9 @@ function Contact({}: ContactProps) {
           <EmojiSun size={60} faceColor="text-accent-color" />
         </div>
         <div className="text-center text-2xl mb-12">
-          x<br />
+          {/* eslint-disable-next-line */}
+          <img src="/Nydelic_Logo.svg" className="h-14 mx-auto" alt="Logo" />
+          <br />
           <a href="mailto:hello@nydelic.ch">hello@nydelic.ch</a>
           <br />
           <br />

@@ -40,7 +40,10 @@ function Nav() {
   return (
     <>
       <div className="flex justify-between items-center">
-        <div>x</div>
+        <div>
+          {/* eslint-disable-next-line */}
+          <img src="/Nydelic_Logo.svg" className="h-14" alt="Logo" />
+        </div>
         <button
           className={`p-3 pt-5 flex flex-col ${navOpen ? "hidden" : ""}`}
           onClick={(e) => {
