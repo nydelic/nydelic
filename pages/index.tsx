@@ -63,6 +63,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Nydelic</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Das neue digitale Gesicht deiner Marke"
+        />
       </Head>
       <header>
         <Nav />
