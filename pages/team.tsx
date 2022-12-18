@@ -50,7 +50,7 @@ function Team({}: TeamProps) {
             <h1 className="text-4xl mt-12">Josias (rechts)</h1>
             <br />
             <p className="px-4 text-xl">
-              Haucht den gestalteten Produkte von Janik leben ein und liebt die
+              Haucht den gestalteten Produkten von Janik leben ein und liebt die
               ständig wandelnde Natur seines Jobs und somit die Möglichkeit, das
               neuste und beste für die Produkte einzusetzen.
             </p>
