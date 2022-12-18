@@ -175,7 +175,14 @@ function NavContent({ visible, onClose }: NavContentProps) {
               <Link href="/">Home</Link>
             </motion.li>
             <motion.li variants={navItemVariants} className="mb-6">
-              <Link href="/offer">Angebot</Link>
+              <Link href="/offer">
+                <a>
+                  <del>Angebot</del>
+                </a>
+              </Link>
+              <small className="relative block text-accent-color-light text-sm h-0">
+                *momentan noch nicht verfügbar
+              </small>
             </motion.li>
             <motion.li variants={navItemVariants} className="mb-6">
               <Link href="/team">Team</Link>
