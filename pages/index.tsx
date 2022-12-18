@@ -120,6 +120,9 @@ const Home: NextPage = () => {
             <p className="px-4 text-xl mb-12">
               Markiere (durch darauf tippen) <br />
               was du dir wünschst.
+              <small className="relative text-xs block text-accent-color-light">
+                *momentan noch nicht verfügbar
+              </small>
             </p>
           </div>
           <OfferSelect />
@@ -130,7 +133,7 @@ const Home: NextPage = () => {
                   <del>Offerte anfragen</del>
                 </a>
               </Link>
-              <small className="relative block text-accent-color-light -translate-y-8">
+              <small className="text-xs relative block text-accent-color-light -translate-y-8">
                 *momentan noch nicht verfügbar
               </small>
               <Link href={"#contact"}>
