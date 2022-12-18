@@ -151,16 +151,15 @@ const Home: NextPage = () => {
             <h1 className="text-4xl mb-12">Leitbild</h1>
             <h2 className="text-3xl mb-4">digital</h2>
             <p className="px-4 text-xl mb-12">
-              Wir freuen uns auf fröhliche <br />
-              Zusammenarbeit die vor <br />
-              Kreativität und Ideen lebt! <br />
+              Dank viel know-how <br />
+              in der digitalen Welt <br />
+              können wir das beste Anbieten
             </p>
             <h2 className="text-3xl mb-4 text-accent-color-light">kreativ</h2>
             <p className="px-4 text-xl mb-12 text-accent-color-light">
-              Haben wir uns erst eine Idee <br />
-              in den Kopf gesetzt, wird <br />
-              alles daran gelegt diese <br />
-              Perfekt umzusetzen!
+              Uns liegt es am Herz <br />
+              neues und innovatives <br />
+              zu erschaffen! <br />
             </p>
             <h2 className="text-3xl mb-4">überlegt</h2>
             <p className="px-4 text-xl mb-12">
